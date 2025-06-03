@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border: 1px solid; margin: 110px; padding: 10px;">
+        <div id="answer" style="height: 50px; width: 200px;">
+            0
+        </div>
+        <div style="grid-template-rows: repeat(5, 1fr); grid-template-columns: repeat(4, 1fr); display: grid;">
+            <button onclick="click('1')">1</button>
+            <button onclick="click('2')">2</button>
+            <button onclick="click('3')">3</button>
+            <button onclick="click('+')">+</button>
+            <button onclick="click('4')">4</button>
+            <button onclick="click('5')">5</button>
+            <button onclick="click('6')">6</button>
+            <button onclick="click('-')">-</button>
+            <button onclick="click('7')">7</button>
+            <button onclick="click('8')">8</button>
+            <button onclick="click('9')">9</button>
+            <button onclick="click('*')">*</button>
+            <button onclick="click('.')">.</button>
+            <button onclick="click('0')">0</button>
+            <button onclick="click('%')">%</button>
+            <button onclick="click('/')">/</button>
+            <button onclick="clearScreen()">AC</button>
+            <button onclick="click('x')">x</button>
+            <button onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let answer = document.getElementById("answer").value;
+
+        function click(value) {
+            if (answer.textContent === "0") {
+                answer.textContent = value;  // Replace 0 with the first clicked value
+            } else {
+                answer.textContent += value;  // Append the clicked value
+            }
+        }
+
+        function clearScreen() {
+            answer.textContent = "0";  // Reset to initial state
+        }
+
+        // Function to handle calculation
+        function calculate() {
+            try {
+                // Replace 'x' with '*' for multiplication
+                let calculation = answer.textContent.replace(/x/g, '*');
+                
+                // Perform the calculation and update the answer
+                answer.textContent = eval(calculation);
+            } catch (e) {
+                // If there's an error (e.g., invalid input), reset to 0
+                answer.textContent = "Error";
+            }
+        }
+    </script>
+</body>
+</html>

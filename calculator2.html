@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <div style="border-radius: 30px;margin: 200px;padding: 20px;width:342px;border: solid 2px rgb(212, 194, 194);background-color: aqua;"
+>
+            <input type="text" id="answer" style="
+    height: 60px;
+    width: 342px;
+    margin: 2px;"
+ readonly/>
+            <div style="grid-template-rows: repeat(4,4fr);grid-template-columns: repeat(4,4fr);display: grid;border: rgb(192, 179, 179);box-shadow: 20px;">
+                <button onclick="appendvalue('1')">1</button>
+                <button onclick="appendvalue('2')">2</button>
+                <button onclick="appendvalue('3')">3</button>
+                <button onclick="deletelast()">del</button>
+
+                <button onclick="appendvalue('4')">4</button>
+                <button onclick="appendvalue('5')">5</button>
+                <button onclick="appendvalue('6')">6</button>
+                <button onclick="appendvalue('+')">+</button>
+
+                <button onclick="appendvalue('7')">7</button>
+                <button onclick="appendvalue('8')">8</button>
+                <button onclick="appendvalue('9')">9</button>
+                <button onclick="appendvalue('-')">-</button>
+
+                <button onclick="allClear()">AC</button>
+                <button onclick="appendvalue('0')">0</button>
+                <button onclick="appendvalue('*')">*</button>
+                <button onclick="calculate()">=</button>
+            </div>
+            <style button="padding:10px;"></style>        </div>
+        <script>
+             function appendvalue(val) {
+                document.getElementById("answer").value += val
+             }
+             function allClear() {
+                document.getElementById("answer").value=''
+             } 
+             function deletelast() {
+                let current =document.getElementById("answer").value
+                document.getElementById("answer").value= current.slice(0,-1)
+             } 
+             function calculate() {
+                try{
+                    let result=eval(document.getElementById("answer").value)
+                    document.getElementById("answer").value=result;
+                } catch(err) {
+                       alert="invalid experience"
+                }
+
+                
+         }      
+             </script>
+    </body>
+</html>

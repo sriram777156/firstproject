@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Login</title>
+        <style>
+            .login-container{
+                padding: 20px;
+                margin: 100px auto;
+                width: 300px;
+                box-shadow: 0 0 10px gray(0,0,0,0.1);
+                background-color: whitesmoke;
+                font-family: cursive;
+                border: 1px snow;
+                border-radius: 10px;
+            }
+            .login-container h2{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .login-container input[type="text"],
+            .login-container input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px gray;
+                border-radius: 5px;
+            }
+            .login-container .success{
+                color:blue;
+                text-align: center;
+                margin-top: 10px;
+
+            }
+            .login-container .error{
+                 color: brown;
+                 margin-top: 20px;
+                 text-align: center;
+            }
+            .login-container button{
+                width: 50%;
+                padding: 10px;
+                margin-bottom: 10px;
+                background-color: aqua;
+            }            </style>
+    </head>
+    <body>
+        <div class="login-container">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="username">
+            <input type="password" id="password" placeholder="password">
+            <button onclick="login()">Login</button>
+            <div id="message"></div>
+        </div>
+        <script src="login.js"></script>
+    </body>
+</html>

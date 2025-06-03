@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h2>what can javascript can change HTML content</h2>
+        <p id="demo">javascript can change HTML content</p>
+        <button type="button"
+        onclick='document.getElementById("demo").innerHTML="Hello JavaScript!!!"'>Click Here</button>
+        <h3>Redeclaring a Variable Using var</h3>
+        <h1 id="demo1"></h1>
+        <h4 id="demo2"></h4>
+        <script>
+            let x= 10;
+            {
+                let x= 2;
+                document.getElementById("demo1").innerHTML= x;            }
+                x= 25;
+            document.getElementById("demo2").innerHTML= x;
+        </script>
+    </body>
+</html>
