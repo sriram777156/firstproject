@@ -1,0 +1,65 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        header {
+            background-color: #2b2d42;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+        }
+        .container {
+            background-image: url(teaching.avif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 75%;
+            color: aliceblue;
+            padding: 20px;
+
+        }
+        nav {
+            background-color: black;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: rgb(80, 182, 241);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        section {
+            padding: 40px;
+            color: #f8f9fa;
+        }
+        .img{
+            flex: fit-content;
+            background: transparent;
+        }
+        footer {
+            background-color: #2b2d42;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .contact-form input, .contact-form textarea {
+            display: block;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #ef233c;
+            color: white;
+            border: none;
+        }
+        .logo{
+            width: 20%;
+            height: 70px;
+        }

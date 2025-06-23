@@ -2,19 +2,27 @@
     <head>
         <title>Login</title>
         <style>
+            .body{
+                background-image: url("nightsky.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
             .login-container{
                 padding: 25px;
                 margin: 100px auto;
                 width: 300px;
                 box-shadow: 0 0 10px gray(0,0,0,0.1);
-                background-color: whitesmoke;
-                font-family: cursive;
-                border: 1px snow;
+                background-color: rgba(255, 255, 255, 0.3);
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                background-image: "nightsky.jpg";
+                border-color: grey;
                 border-radius: 10px;
             }
             .login-container h2{
                 text-align: center;
                 margin-bottom: 20px;
+                border-color: black;
             }
             .login-container input[type="text"],
             .login-container input[type="password"] {
@@ -23,6 +31,7 @@
                 margin: 10px 0;
                 border: 1px gray;
                 border-radius: 5px;
+                background-color: rgba(255, 255, 255, 0.5);
             }
             .login-container .success{
                 color:blue;
@@ -36,13 +45,22 @@
                  text-align: center;
             }
             .login-container button{
-                width: 50%;
+                width: 100%;
                 padding: 10px;
                 margin-bottom: 10px;
-                background-color: aqua;
-            }            </style>
+                background-color: purple;
+                border-radius: 20px;
+            }
+            .login-container button:hover{
+                background-color: lightpink;
+                transform: scale(1.1);
+                box-shadow: 0 0 15px rgba(72, 163, 72, 0.8);
+            }           </style>
     </head>
-    <body>
+    <body style="background:url('./nightsky.jpg');
+    background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;">
         <div class="login-container">
             <h2>Login</h2>
             <input type="text" id="username" placeholder="username">
