@@ -1,5 +1,5 @@
-const username="vihaan";
-const password="saami";
+const username="MariSri";
+const password="mari143";
 
 function login() {
     const user=document.getElementById("username").value;
