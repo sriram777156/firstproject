@@ -6,10 +6,13 @@
             background-color: black;
         }
         header {
-            background-color: #2b2d42;
+            background-color: #111111;
             color: white;
             padding: 20px 40px;
             text-align: center;
+        }
+        .iyyan {
+            flex-direction: row;
         }
         .container {
             background-image: url(teaching.avif);
@@ -50,7 +53,6 @@
             display: block;
             margin: 10px 0;
             width: 100%;
-            max-width: 500px;
             padding: 10px;
         }
         .contact-form button {
